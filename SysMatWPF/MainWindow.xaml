@@ -1,0 +1,392 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:gif="http://wpfanimatedgif.codeplex.com"  
+	xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+	xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+    xmlns:local="clr-namespace:SysMatWPF"
+	xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid" 
+    x:Class="SysMatWPF.mainwindow"
+
+	ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent" Loaded="Window_Loaded"
+	Width="320" Height="650" Icon="images/SysMat.ico">
+
+	<!--<tb:TaskbarIcon x:Name="myNotifyIcon"
+					Visibility="Visible"
+					ToolTipText="Fallback ToolTip for Windows xp"
+					IconSource="images/SAPhoneBook.ico"
+					ContextMenu="{StaticResource TrayMenu}"
+					MenuActivation="LeftOrRightClick"                   
+					PopupActivation="DoubleClick"/>-->
+
+	<!--#####################################  Window resources ######################################-->
+	<Window.Resources>
+		<ResourceDictionary>
+            
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Resources\ScrollBar.xaml"/>
+				<ResourceDictionary Source="Resources\Buttons.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+            
+            <local:MouseOverToScrollBarVisibility x:Key="MouseOverToScrollBarVisibility" />
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            
+		</ResourceDictionary>
+	</Window.Resources>
+	<!--###################################  END Window resources ####################################-->
+
+
+    <Border BorderBrush="DarkGray" BorderThickness="0.5" Background="White" Margin="0" CornerRadius="3" Width="300" Height="645">
+		<Border.Effect>
+			<DropShadowEffect ShadowDepth="0" BlurRadius="5" Color="black" Opacity="0.85" Direction="270"/>
+		</Border.Effect>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+
+            <!--Close Button grid with borderless removable function-->
+            <Grid Width="300" Margin="0,0,0,5" Grid.Column="0" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="70" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="images\logo.png" Grid.Column="0" Margin="10,5,0,0"/>
+
+                <Rectangle Grid.ColumnSpan="3" x:Name="rectangle2" Height="30"
+					Fill="Transparent" MouseDown="rectangle2_MouseDown_1"/>
+                <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                    
+                    <Button x:Name="MinApp" Width="25" Height="20"  HorizontalAlignment="Right" Margin="0,0,0,0"
+						Style ="{StaticResource SquareBackgroundButton}" ToolTip="Minimize" Click="MinApp_Click">
+                        <Image Source="images\minimize.png" Width="10"/>
+                    </Button>
+                    
+                    <Button Width="25" Height="20" HorizontalAlignment="Right" Margin="0,0,3,0"
+						Style ="{StaticResource SquareBackgroundButton}" ToolTip="Close" Click="ExitApp_Click">
+                        <Image Source="images\close.png"/>
+                    </Button>
+                    
+                </StackPanel>
+
+            </Grid>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch">
+
+                <xctk:WatermarkTextBox x:Name="tb_ComputerName"  Watermark="Insert Computer Name" Width="225" Margin="10,5,0,5" 
+									   Padding="5,4,0,4" CharacterCasing="Upper" TextChanged="tbSearch_TextChanged">
+                </xctk:WatermarkTextBox>
+
+                <Button Width="16" Height="16" Margin="-28,0,0,0" x:Name="btnClearSearchTB" Visibility="Hidden"
+					Style ="{StaticResource roundButtonTemplateVerySmall}" ToolTip="Clear" Click="ClearSearch">
+                    <Image Source="images\clear.png" Width="12" />
+                </Button>
+                <Button x:Name="addComputer" Width="52" Height="24" ToolTip="Insert" Margin="6,0,0,0" Style ="{StaticResource myFirstbutton}" 
+					Content="Insert" Click="addComputer_Click" IsDefault="True"/>
+            </StackPanel>
+
+            <!--Slide Panel-->
+            <Border x:Name="SliderPanel" HorizontalAlignment="Stretch" Background="#c8c6c6" VerticalAlignment="Top" CornerRadius="0" Panel.ZIndex="1" 
+					    Height="20"  Grid.Column="0" Grid.Row="2">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="10,0,0,0">Administrator Details</TextBlock>
+            </Border>
+            
+            <!--Computer List-->
+            <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="2" Margin="0,25,0,0">
+
+                <!--Add TExt File Button-->
+                <Border x:Name="DragAndDropBG" Height="480" Width="225"  Margin="8,0,2,0" Background="#f5f5f5" VerticalAlignment="Top">
+                    <Button x:Name="addComputers" Width="225" Height="480" Margin="0,0,0,0" Style ="{StaticResource mySecondbutton}" 
+						Click="addComputers_Click" VerticalAlignment="Center">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Width="190">Click To Add Computers To The List (Text File)</TextBlock>
+                    </Button>
+                </Border>
+
+                <ScrollViewer Margin="0" Height="480" 
+                            HorizontalScrollBarVisibility="Hidden"  
+                            Style="{StaticResource SVStyle}"
+                            ScrollViewer.VerticalScrollBarVisibility="{Binding IsMouseOver, RelativeSource={RelativeSource Self},
+                            Converter={StaticResource MouseOverToScrollBarVisibility}}">
+                    
+                <!--Main DataGrid-->
+                <DataGrid x:Name="mainDataGrid" 
+                          Height="auto" 
+                          Width="230" 
+                          AutoGenerateColumns="False" 
+                          Margin="5,0,0,0" 
+                          Background="#f5f5f5" 
+                          ItemsSource="{Binding}"
+                          HorizontalAlignment="Left" 
+                          HorizontalScrollBarVisibility="Hidden"
+                          VerticalScrollBarVisibility="Hidden"
+                          CanUserAddRows="False"
+                          BorderThickness="0" 
+                          GridLinesVisibility="None" 
+                          HeadersVisibility="None" 
+                          SelectionMode="Extended" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
+                          ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                          Visibility="Collapsed">
+
+                    <DataGrid.CellStyle>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.CellStyle>
+
+                    <DataGrid.RowStyle>
+                        <Style TargetType="{x:Type DataGridRow}">
+                            <Setter Property="BorderBrush" Value="Transparent"/>
+                            <Setter Property="BorderThickness" Value="0.5"/>
+                            <Setter Property="Background" Value="#f5f5f5"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="true" >
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="Background" Value="White"/>
+                                </Trigger>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.RowStyle>
+
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn IsReadOnly="True">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+
+                                    <!--Main Computer Panel-->
+                                    <Border x:Name="SliderPanel"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Panel.ZIndex="0">
+                                        <Border.ContextMenu x:Uid="CM_Computer">
+                                            <ContextMenu x:Name="MainLeftClickMenu">
+                                                    <MenuItem x:Name="MenuItem_PingTest" Header="Ping The Name" Click="MenuItem_PingTest_Click"/>
+                                                    <MenuItem x:Name="MenuItem_PingTestIP" Header="Ping The IP" Click="MenuItem_PingTestIP_Click"/>
+                                                    <Separator />
+                                                    <MenuItem x:Name="MenuItem_GetRaccountPwd" Command="" Header="Get Raccount" Click="MenuItem_GetRaccountPwd_Click"/>
+                                                    <MenuItem Command="" Header="Add Administrators">
+                                                        <MenuItem Header="Add Me"/>
+                                                        <MenuItem Header="Add UserID"/>
+                                                        <MenuItem x:Name="AddLocalUser" Header="Add Local User" Click="AddLocalUser_Click"/>
+                                                    </MenuItem>
+                                                    <MenuItem Command="" Header="Remove Administrators">
+                                                        <MenuItem Header="Remove Me"/>
+                                                        <MenuItem Header="Remove UserID"/>
+                                                        <MenuItem Header="Remove Local User"/>
+                                                    </MenuItem>
+                                                    <MenuItem Command="" Header="Run Script"/>
+                                                    <MenuItem Command="" Header="Change Computer Name"/>
+                                                    <MenuItem Header="Create on ActiveDirectory"/>
+                                                    <MenuItem Command="" Header="Re-Join Domain"/>
+                                                    <MenuItem x:Name="openCDrive" Command="" Header="Open C:\ Drive" Click="openCDrive_Click"/>
+                                                    <Separator />
+                                                    <MenuItem Command="" Header="Get Computer Details"/>
+                                                    <MenuItem Command="" Header="Get UserInfo Details"/>
+                                                    <Separator />
+                                                    <MenuItem x:Name="MenuItem_rdp" Header="Remote Desktop - Name" Click="MenuItem_rdp_Click">
+                                                        <MenuItem.Icon>
+                                                            <Image Source="images/rdp.png" />
+                                                        </MenuItem.Icon>
+                                                    </MenuItem>
+                                                    <MenuItem x:Name="MenuItem_rdp_IP" Header="Remote Desktop - IP" Click="MenuItem_rdp_IP_Click">
+                                                        <MenuItem.Icon>
+                                                            <Image Source="images/rdp.png" />
+                                                        </MenuItem.Icon>
+                                                    </MenuItem>
+                                                    <MenuItem x:Name="MenuItem_rdp_Auto"  Header="Enable 'Remote Desktop' On Remote" Click="MenuItem_rdp_Auto_Click">
+                                                    <MenuItem.Icon>
+                                                        <Image Source="images/rdp.png" />
+                                                    </MenuItem.Icon>
+                                                    </MenuItem>
+                                                    <MenuItem Command="" Header="View Screen">
+                                                        <MenuItem.Icon>
+                                                            <Image Source="" />
+                                                        </MenuItem.Icon>
+                                                    </MenuItem>
+                                                    <Separator />
+                                                    <MenuItem Command="" Header="Copy">
+                                                        <MenuItem.Icon>
+                                                            <Image Source="images/ClipboardCopy.png" Height="16" Width="16" />
+                                                        </MenuItem.Icon>
+                                                    <MenuItem x:Name="MenuItem_CopyName" Header="Copy Machine Name" Click="MenuItem_CopyName_Click"/>
+                                                    <MenuItem x:Name="MenuItem_CopyIP" Header="Copy IP" Click="MenuItem_CopyIP_Click"/>
+                                                    </MenuItem>
+                                                    <MenuItem Command="" Header="Remove From List"/>
+                                            </ContextMenu>
+                                        </Border.ContextMenu>
+                                        
+                                        <StackPanel x:Name="MainEmployeeStackPanel" Orientation="Horizontal" Height="50" Margin="0,0,0,0">
+
+                                            <CheckBox IsChecked="False" Margin="9,15,5,0" Visibility="Hidden"></CheckBox>
+                                            
+                                            <Image x:Name="Preloader" gif:ImageBehavior.AnimatedSource="Images/loader_black.gif" Margin="-25,0,0,7" Width="18" 
+                                                 HorizontalAlignment="Left" Visibility="Hidden"/>
+
+                                            <Image x:Name="pcImage" Width="45" Height="45"
+										        Stretch="Fill" Margin="0,0,3,0" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" />
+
+                                            <StackPanel x:Name="pcInfo" Margin="0,3,0,0">
+                                                <TextBlock x:Name="pcName" Margin="6,3,0,0" FontFamily="Ariel" FontSize="13" FontWeight="Bold" Text="{Binding pc_name}"/>
+                                                <TextBlock x:Name="pcStatus" Margin="0" FontFamily="Ariel" FontSize="10" Text="{Binding pc_status, NotifyOnTargetUpdated=True}" TargetUpdated="pcStatus_TargetUpdated" Visibility="Collapsed"/>                                           
+                                                <TextBlock x:Name="pcIp" Margin="6,1,0,0" FontFamily="Ariel" FontSize="10" Text="{Binding pc_ip}"/>
+                                                <TextBlock x:Name="pcMacaddress" Margin="5,1,0,0" FontFamily="Ariel" FontSize="10" Text="{Binding pc_macaddress}" Visibility="Collapsed"/>
+                                            </StackPanel>
+
+                                                <Border Panel.ZIndex="1" Margin="0 0 0 0" x:Name="DeletePC" >
+                                                    <Border.Style>
+                                                        <Style TargetType="Border">
+                                                            <Setter Property="Visibility" Value="Collapsed" />
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type DataGridCell}}, Path=IsMouseOver}" Value="True">
+                                                                    <Setter Property="Visibility" Value="Visible" />
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Border.Style>
+
+                                                    <StackPanel>
+                                                        <Image x:Name="DelImage" Width="15" Height="15" Visibility="Visible" Margin="5 5 0 0">
+                                                            
+                                                            <Image.Style>
+                                                                <Style TargetType="Image">
+                                                                    <Setter Property="Source" Value="images\DeleteGray.png" />
+                                                                    <Style.Triggers>
+                                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                                            <Setter Property="Source" Value="images/DeleteRed.png" />
+                                                                        </Trigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+
+                                                            </Image.Style>
+                                                        </Image>
+
+                                                        <TextBox x:Name="pcDsc" FontFamily="Ariel" BorderThickness="0" Foreground="Gray" FontSize="10" 
+                                                                 Text="{Binding pc_Description}" Margin="-113 14 0 0" KeyUp="pcDsc_KeyUp"/>
+                                                        
+                                                    </StackPanel>
+                                                </Border>
+                                            </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                </ScrollViewer>
+
+                <Border Width="52" Height="480" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" CornerRadius="4" Background="#e3e3e3">
+                    <StackPanel Margin="0,5,0,0">
+                        <Button x:Name="Ping" Width="43" Height="43" ToolTip="Ping" Style ="{StaticResource roundButtonTemplatelinks}" Click="Ping_Click">
+                            <TextBlock Text="PING" FontSize="12" FontWeight="Bold"  />
+                        </Button>
+                        
+                        <Button Width="43" Height="43" ToolTip="Add Administrators" Style ="{StaticResource roundButtonTemplatelinks}">
+                            <Image Source="images\addAdmin.png" />
+                        </Button>
+
+                        <Button Width="43" Height="43" ToolTip="Run Script" Style ="{StaticResource roundButtonTemplatelinks}">
+                            <Image Source="images\script.png" />
+                        </Button>
+
+                        <Button Width="43" Height="43" ToolTip="Shutdown, Restart, Log Off, Hibernate, Wake" Style ="{StaticResource roundButtonTemplatelinks}">
+                            <Image Source="images\shutdown.png"/>
+                        </Button>
+
+                        <Button Width="43" Height="43" ToolTip="Remote\View Clients Desktop" Style ="{StaticResource roundButtonTemplatelinks}">
+                            <Image Source="images\remotedesktop.png" />
+                        </Button>
+
+                        <Button Width="43" Height="43" ToolTip="IP Scanner" Style ="{StaticResource roundButtonTemplatelinks}">
+                            <Image Source="images\userinfo.png" />
+                        </Button>
+
+                        <Button Width="43" Height="43" ToolTip="Show PC Info" Style ="{StaticResource roundButtonTemplatelinks}">
+                            <TextBlock Text="INF" FontSize="12" FontWeight="Bold"  />
+                        </Button>
+
+                        <Button x:Name="WMIConn" Width="43" Height="43" ToolTip="WMI Connection" Style ="{StaticResource roundButtonTemplatelinks}" Click="WMIConn_Click">
+                            <TextBlock Text="WMI" FontSize="12" FontWeight="Bold"  />
+                        </Button>
+
+                        <Button x:Name="takeOwnership" Width="43" Height="43" ToolTip="Take Ownership" Style ="{StaticResource roundButtonTemplatelinks}" Click="takeOwnership_Click">
+                            <TextBlock Text="OWN" FontSize="12" FontWeight="Bold"  />
+                        </Button>
+
+                        <Button Width="43" Height="43" ToolTip="Show Log Window" Style ="{StaticResource roundButtonTemplatelinks}" Click="openLogWin">
+                            <TextBlock Text="LOG" FontSize="12" FontWeight="Bold"  />
+                        </Button>
+
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="AliceBlue" Margin="0,3,0,0" Grid.Column="0" Grid.Row="3">
+
+                <Button x:Name="btn_save" Width="38" Height="38" ToolTip="Save Current List (Overwrite the last one)" Style="{StaticResource roundButtonTemplate}" Margin="5,0,0,0" Click="btn_save_Click">
+                    <TextBlock Text="SAVE" FontSize="8" FontWeight="Bold"  />
+                </Button>
+                    
+                <Button x:Name="btn_load" Width="38" Height="38" Style="{StaticResource roundButtonTemplate}" Margin="5,0,0,0" ToolTip="Load Last Saved List" Click="btn_load_Click">
+                    <TextBlock Text="LOAD" FontSize="8" FontWeight="Bold"  />
+				</Button>
+
+				<Button x:Name="btn_clear" Width="38" Height="38" ToolTip="Clear List" Style="{StaticResource roundButtonTemplate}" Margin="5,0,0,0" Click="btn_clear_Click">
+					<TextBlock Text="CLR" FontSize="8" FontWeight="Bold"  />
+				</Button>
+
+				<Button x:Name="test" Width="38" Height="38" ToolTip="Test" Style="{StaticResource roundButtonTemplate}" Margin="5,0,0,0" Click="test_Click">
+					<TextBlock Text="" FontSize="8" FontWeight="Bold"  />
+				</Button>
+
+                <Button x:Name="test2" Width="38" Height="38" ToolTip="Test" Style="{StaticResource roundButtonTemplate}" Margin="5,0,0,0" Click="test_Click">
+                    <TextBlock Text="" FontSize="8" FontWeight="Bold"  />
+                </Button>
+                    
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="15,0,5,0">
+					<TextBlock Margin="0,0,0,0" FontFamily="Ariel" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Text="{Binding Items.Count, ElementName=mainDataGrid}"/>
+					<TextBlock Margin="0,0,0,0" FontFamily="Ariel" FontSize="10" ><Run Text="Count"/></TextBlock>
+				</StackPanel>
+
+				<StackPanel Orientation="Vertical" VerticalAlignment="Center">
+					<TextBlock Margin="0,0,0,0" FontFamily="Ariel" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Text="{Binding Items.Count, ElementName=mainDataGrid}"/>
+					<TextBlock Margin="0,0,0,0" FontFamily="Ariel" FontSize="10" ><Run Text="Check"/></TextBlock>
+				</StackPanel>    
+            </StackPanel>
+            
+            <TextBlock Text="Version 1.00" Margin="10,0,0,0" VerticalAlignment="Center" Foreground="Gray" Grid.Column="0" Grid.Row="4" Visibility="Hidden" />
+
+            <Grid HorizontalAlignment="Stretch" Grid.Column="0" Grid.Row="4" Background="#0072c6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="160" />
+                    <ColumnDefinition Width="40" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="WhiteBoard" Grid.Column="4" Width="40" Height="20" HorizontalAlignment="Right"
+							    Style ="{StaticResource SquareBackgroundButtonDark}" ToolTip="WhiteBoard" Click="WhiteBoard_Click">
+                    <Image Source="images\whiteboard.png" Height="15" />
+                </Button>
+            </Grid>
+            
+        </Grid>
+    </Border>
+</Window>
+	

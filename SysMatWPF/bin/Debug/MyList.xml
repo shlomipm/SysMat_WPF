@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <MyComputerList>
+    <pc_name>WDFV41000081M</pc_name>
+    <pc_status>OffLine</pc_status>
+    <pc_ip>10.76.98.236</pc_ip>
+    <pc_Description>Windows 8.1 x86 Base</pc_Description>
+  </MyComputerList>
+  <MyComputerList>
+    <pc_name>WDFV41000030M</pc_name>
+    <pc_status>OffLine</pc_status>
+    <pc_ip>10.76.97.182</pc_ip>
+    <pc_Description>WIndows 8.1 Corp</pc_Description>
+  </MyComputerList>
+  <MyComputerList>
+    <pc_name>WDFV41000060M</pc_name>
+    <pc_status>OffLine</pc_status>
+    <pc_ip>10.76.98.229</pc_ip>
+    <pc_Description>Windows 8.1 x64 Base</pc_Description>
+  </MyComputerList>
+  <MyComputerList>
+    <pc_name>WDFV41000007M</pc_name>
+    <pc_status>OffLine</pc_status>
+    <pc_ip>10.76.104.230</pc_ip>
+    <pc_Description>Windows 7 Corp</pc_Description>
+  </MyComputerList>
+  <MyComputerList>
+    <pc_name>WDFV41000040M</pc_name>
+    <pc_status>OffLine</pc_status>
+    <pc_ip>10.76.106.211</pc_ip>
+    <pc_Description>Windows 7 x64 Base</pc_Description>
+  </MyComputerList>
+  <MyComputerList>
+    <pc_name>WDFV41000104M</pc_name>
+    <pc_status>OffLine</pc_status>
+    <pc_ip>10.76.101.170</pc_ip>
+    <pc_Description>Windows 7 x86 Base</pc_Description>
+  </MyComputerList>
+  <MyComputerList>
+    <pc_name>WDFV41000090M</pc_name>
+    <pc_status>OffLine</pc_status>
+    <pc_ip>10.76.101.120</pc_ip>
+    <pc_Description>Windows 8 x86 Base</pc_Description>
+  </MyComputerList>
+  <MyComputerList>
+    <pc_name>WDFV41000070M</pc_name>
+    <pc_status>OffLine</pc_status>
+    <pc_ip>10.76.99.107</pc_ip>
+    <pc_Description>Windows 8 x64 Base</pc_Description>
+  </MyComputerList>
+  <MyComputerList>
+    <pc_name>WDFV41000061M</pc_name>
+    <pc_status>OnLine</pc_status>
+    <pc_ip>10.76.102.182</pc_ip>
+  </MyComputerList>
+</DocumentElement>

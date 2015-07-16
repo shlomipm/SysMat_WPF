@@ -1,0 +1,62 @@
+﻿<Data>
+  <Book>
+    <FullName>מיכל פרץ</FullName>
+    <Cellphone>050-7237889</Cellphone>
+    <Home>077-5252526</Home>
+    <Work>03-6904520</Work>
+  </Book>
+  <Book>
+    <FullName>אורי פרץ</FullName>
+    <Cellphone>054-4331438</Cellphone>
+    <Home>077-5252526</Home>
+    <Work />
+  </Book>
+  <Book>
+    <FullName>זוהר פרץ</FullName>
+    <Cellphone>054-4570405</Cellphone>
+    <Home />
+    <Work>03-7126094</Work>
+  </Book>
+  <Book>
+    <FullName>מוטי כהן</FullName>
+    <Cellphone>052-4708395 </Cellphone>
+    <Home />
+    <Work>08-6297395 </Work>
+  </Book>
+  <Book>
+    <FullName>ראובן בן דוד</FullName>
+    <Cellphone>054-2324270 </Cellphone>
+    <Home />
+    <Work>03-5758444</Work>
+  </Book>
+  <Book>
+    <FullName>סיוון אושני</FullName>
+    <Cellphone>050-7119065 </Cellphone>
+    <Home />
+    <Work />
+  </Book>
+  <Book>
+    <FullName>קורל אברהמי</FullName>
+    <Cellphone>052-5581261 </Cellphone>
+    <Home />
+    <Work />
+  </Book>
+  <Book>
+    <FullName>דנה רז</FullName>
+    <Cellphone>054-9911440</Cellphone>
+    <Home />
+    <Work />
+  </Book>
+  <Book>
+    <FullName>חופית מכלוף</FullName>
+    <Cellphone>050-8264574</Cellphone>
+    <Home />
+    <Work />
+  </Book>
+  <Book>
+    <FullName>ורד ימין</FullName>
+    <Cellphone />
+    <Home>04-8682064</Home>
+    <Work />
+  </Book>
+</Data>

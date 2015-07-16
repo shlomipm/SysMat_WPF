@@ -1,0 +1,98 @@
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\SAPPhoneBook_2014.exe.config
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\SAPPhoneBook_2014.exe.manifest
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\SAPPhoneBook_2014.application
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\SAPPhoneBook_2014.exe
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\SAPPhoneBook_2014.pdb
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\MainWindow.baml
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\PersonalAddressBook.baml
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\Resources\Buttons.baml
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\Resources\ScrollBar.baml
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\TextMessage.baml
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\MainWindow.g.cs
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\PersonalAddressBook.g.cs
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\TextMessage.g.cs
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\App.g.cs
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SAPPhoneBook_2014_MarkupCompile.cache
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SAPPhoneBook_2014.g.resources
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\NewSAPPhoneBook.Properties.Resources.resources
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.csproj.GenerateResource.Cache
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SAPPhoneBook_2014.exe.manifest
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SAPPhoneBook_2014.application
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SAPPhoneBook_2014.exe
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SAPPhoneBook_2014.pdb
+C:\Users\Shlomi\Dropbox\My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.csprojResolveAssemblyReference.cache
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\MainWindow.baml
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\Resources\Buttons.baml
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\Resources\ScrollBar.baml
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\MainWindow.g.cs
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\App.g.cs
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF_MarkupCompile.cache
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.g.resources
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.Properties.Resources.resources
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.csproj.GenerateResource.Cache
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\SysMatWPF.exe.config
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\SysMatWPF.exe
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\SysMatWPF.pdb
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.exe
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.pdb
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\RaccountWindow.baml
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\RaccountWindow.g.cs
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\MainWindow.baml
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\RaccountWindow.baml
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\Resources\Buttons.baml
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\Resources\ScrollBar.baml
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\MainWindow.g.cs
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\RaccountWindow.g.cs
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\App.g.cs
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF_MarkupCompile.cache
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.g.resources
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.Properties.Resources.resources
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.csproj.GenerateResource.Cache
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\SysMatWPF.exe.config
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\SysMatWPF.exe
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\SysMatWPF.pdb
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.exe
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.pdb
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\xceed.wpf.datagrid.dll
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\bin\Debug\xceed.wpf.datagrid.dll
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\MyLog.baml
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\MyLog.g.cs
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\MyLog.baml
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\MyLog.g.cs
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\wmiInfo.baml
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\wmiInfo.g.cs
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\wmiInfo.baml
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\wmiInfo.g.cs
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF_MarkupCompile.lref
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.csprojResolveAssemblyReference.cache
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Shlomi\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF_MarkupCompile.lref
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\NewSAPPhoneBook\obj\Debug\SysMatWPF.csprojResolveAssemblyReference.cache
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\bin\Debug\SysMatWPF.exe.config
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\SysMatWPF.exe
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\SysMatWPF.pdb
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\bin\Debug\SysMatWPF.exe
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\bin\Debug\SysMatWPF.pdb
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\MyLog.baml
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\RaccountWindow.baml
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\Resources\Buttons.baml
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\wmiInfo.baml
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\MainWindow.g.cs
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\MyLog.g.cs
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\RaccountWindow.g.cs
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\wmiInfo.g.cs
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\App.g.cs
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\SysMatWPF_MarkupCompile.cache
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\SysMatWPF_MarkupCompile.lref
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\MainWindow.baml
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\Resources\ScrollBar.baml
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\SysMatWPF.g.resources
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\SysMatWPF.Properties.Resources.resources
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\SysMatWPF.csproj.GenerateResource.Cache
+C:\Users\c5084389\Dropbox\3. My Dev Folder\'SysMat' - WPF\SysMatWPF\obj\Debug\SysMatWPF.csprojResolveAssemblyReference.cache

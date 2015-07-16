@@ -1,0 +1,92 @@
+﻿<Window x:Class="SysMatWPF.wmiInfo"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="Manual" AllowsTransparency="True" Background="Transparent"
+		Title="wmiInfo" Height="650" Width="350" Opacity="0.9">
+
+    <!--#####################################  Window resources ######################################-->
+    <Window.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\ScrollBar.xaml"/>
+                <ResourceDictionary Source="Resources\Buttons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        </ResourceDictionary>
+
+    </Window.Resources>
+    <!--###################################  END Window resources ####################################-->
+
+    <Grid>
+        <Border BorderBrush="DarkGray" BorderThickness="2" Background="#e4e4e4" Margin="5" CornerRadius="0,12,12,0"  Height="630">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="1" BlurRadius="20" Color="DarkGray"/>
+            </Border.Effect>
+
+            <StackPanel Width="330" VerticalAlignment="Top" HorizontalAlignment="Center">
+
+                <Grid Width="330" Margin="0,3,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" Margin="5,0,0,0" VerticalAlignment="Center" >Computer Info</Label>
+                    
+                    <Rectangle Grid.Column="1" x:Name="rectangle2" Height="30"
+					Fill="Transparent" />
+                    <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">                       
+                        <Button Width="30" Height="30" HorizontalAlignment="Right" Margin="0,0,0,0"
+						Style ="{StaticResource roundButtonTemplateSmall}" ToolTip="Close" >
+                            <Image Source="images\exit.png" />
+                        </Button>
+                    </StackPanel>
+                </Grid>
+
+                <StackPanel Orientation="Horizontal" Margin="10,0" Height="540">
+                    <StackPanel Width="110">
+                        <TextBlock Text="Machine Name:" />
+                        <TextBlock Text="Last BootUp Time:" />
+                        <TextBlock Text="Model:" />
+                        <TextBlock Text="Manufacturer:" />
+                        <TextBlock Text="Domain" />
+                        <TextBlock Text="Physical Memory:" />
+                        <TextBlock Text="User Name:" />
+                        <TextBlock Text="IP Address:" />
+                        <TextBlock Text="Mac Address:" />
+                        <TextBlock Text="Operation System:" />
+                        <TextBlock Text="ServicePack:" />
+                        <TextBlock Text="Description:" />
+                    </StackPanel>
+                
+                    <StackPanel Margin="5,0,0,0">
+                        <TextBlock Text="{Binding CSName}" />
+                        <TextBlock Text="{Binding LastBootUpTime}" />
+                        <TextBlock Text="{Binding Model}" />
+                        <TextBlock Text="{Binding Manufacturer}" />
+                        <TextBlock Text="{Binding Domain}" />
+                        <TextBlock Text="{Binding TotalPhysicalMemory}" />
+                        <TextBlock Text="{Binding UserName}" />
+                        <TextBlock Text="{Binding IPAddress[0]}" />
+                        <TextBlock Text="{Binding MACAddress}" />
+                        <TextBlock Text="{Binding Name}" />
+                        <TextBlock Text="{Binding ServicePackMajorVersion}" />
+                        <TextBlock Text="{Binding Description}" />
+                    </StackPanel>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                    <Button x:Name="clearLog" Width="63" Height="24" ToolTip="Clear Log" Margin="5,0,0,0" Style ="{StaticResource myFirstbutton}" 
+					        Content="Clear"/>
+
+                    <Button x:Name="saveLog" Width="63" Height="24" ToolTip="Save Log To Text File" Margin="5,0,0,0" Style ="{StaticResource myFirstbutton}" 
+					        Content="Save" />
+                </StackPanel>
+                
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
